@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - A.F.R.O Byte Coders</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px; /* Increased gap for more spacing */
+            margin: 40px 20px;
+        }
+
+        .course-card {
+            background-color: dodgerblue;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .course-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .course-card p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .course-card iframe {
+            margin-top: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: darkolivegreen;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-bottom: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .aligncenter {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .glitch {
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        .main-content {
+            padding: 20px;
+        }
+
+        /* Responsive design adjustments */
+        @media (max-width: 768px) {
+            .course-grid {
+                grid-template-columns: 1fr;
+                margin: 20px 10px;
+            }
+
+            .course-card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <a href="#home" class="logo">
+        <img src="/mnt/data/logoone.png" alt="Logo" class="logo-img">
+    </a>
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <nav class="navbar">
+        <ul>
+            <li><a href="HomePage.html" class="nav-link">Home <i class='bx bx-home'></i></a></li>
+            <li><a href="#learn" class="nav-link">Learn <i class='bx bx-book'></i></a></li>
+            <li><a href="courses.html" class="nav-link active">Courses <i class='bx bx-code-alt'></i></a></li>
+            <li><a href="#chatbot" class="nav-link">Chatbot <i class='bx bx-message-square-dots'></i></a></li>
+            <li><a href="#contact" class="nav-link">Contact <i class='bx bx-envelope'></i></a></li>
+            <li><a href="resources.html" class="nav-link">Resources <i class='bx bx-folder'></i></a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="main-content">
+    <section class="courses">
+        <h1 class="aligncenter glitch" data-text="Courses for Coders">Courses for Coders</h1>
+        <div class="course-grid">
+            <!-- SQL -->
+            <div class="course-card">
+                <h2>SQL Programming</h2>
+                <p>Learn how to work with relational databases and write powerful queries with SQL.</p>
+                <a href="sql-course.html" class="btn">Start Learning</a>
+                <iframe width="300" height="200" src="https://youtube.com/embed/27axs9dO7AE" title="SQL Course Video" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <!-- Java -->
+            <div class="course-card">
+                <h2>Java Programming</h2>
+                <p>Master the core concepts of Java for building web and desktop applications.</p>
+                <a href="java-course.html" class="btn">Start Learning</a>
+                <iframe width="300" height="200" src="https://youtube.com/embed/3u1fu6f8Hto" title="Java Course Video" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <!-- JavaScript -->
+            <div class="course-card">
+                <h2>JavaScript</h2>
+                <p>Explore JavaScript, the language of the web, to build interactive websites.</p>
+                <a href="javascript-course.html" class="btn">Start Learning</a>
+                <iframe width="300" height="200" src="https://youtube.com/embed/fju9ii8YsGs" title="JavaScript Course Video" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <!-- C -->
+            <div class="course-card">
+                <h2>C Programming</h2>
+                <p>Get started with C, one of the most powerful and efficient programming languages.</p>
+                <a href="c-course.html" class="btn">Start Learning</a>
+                <iframe width="300" height="200" src="https://youtube.com/embed/8PopR3x-VMY" title="C Course Video" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <!-- C++ -->
+            <div class="course-card">
+                <h2>C++ Programming</h2>
+                <p>Learn the advanced capabilities of C++ to build high-performance applications.</p>
+                <a href="cpp-course.html" class="btn">Start Learning</a>
+                <iframe width="300" height="200" src="https://youtube.com/embed/vLnPwxZdW4Y" title="C++ Course Video" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <!-- C# -->
+            <div class="course-card">
+                <h2>C# Programming</h2>
+                <p>Dive into C#, a modern language for building software and apps with Microsoft frameworks.</p>
+                <a href="csharp-course.html" class="btn">Start Learning</a>
+                <iframe width="300" height="200" src="https://youtube.com/embed/gfkTfcpWqAY" title="C# Course Video" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <!-- Python -->
+            <div class="course-card">
+                <h2>Python Programming</h2>
+                <p>Learn Python, a versatile language used for everything from web development to AI.</p>
+                <a href="python-course.html" class="btn">Start Learning</a>
+                <iframe width="300" height="200" src="https://youtube.com/embed/WGJJIrtnfpk" title="Python Course Video" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <!-- Go -->
+            <div class="course-card">
+                <h2>Go Programming</h2>
+                <p>Discover Go, a modern language designed by Google for system and web development.</p>
+                <a href="go-course.html" class="btn">Start Learning</a>
+                <iframe width="300" height="200" src="https://youtube.com/embed/YS4e4q9oBaU" title="Go Course Video" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources - A.F.R.O Byte </title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin: 40px 20px;
+    }
+
+    .resource-card {
+      background-color: #333;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .resource-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .resource-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: var(--main-color);
+    }
+
+    .resource-card p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      color: #aaa;
+      line-height: 1.5;
+    }
+
+    .resource-card a {
+      display: inline-block;
+      background-color: var(--main-color);
+      color: var(--bg-color);
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .resource-card a:hover {
+      background-color: var(--hover-color);
+    }
+
+    .aligncenter {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .glitch {
+      font-size: 2.5rem;
+      color: var(--text-color);
+    }
+
+    @media (max-width: 768px) {
+      .resources-grid {
+        grid-template-columns: 1fr;
+        margin: 20px 10px;
+      }
+
+      .resource-card {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+<header class="header">
+  <a href="#home" class="logo">
+    <img src="/mnt/data/logoone.png" alt="Logo" class="logo-img">
+  </a>
+  <i class='bx bx-menu' id="menu-icon"></i>
+  <nav class="navbar">
+    <ul>
+      <li><a href="HomePage.html" class="nav-link">Home <i class='bx bx-home'></i></a></li>
+      <li><a href="#learn" class="nav-link">Learn <i class='bx bx-book'></i></a></li>
+      <li><a href="courses.html" class="nav-link">Courses <i class='bx bx-code-alt'></i></a></li>
+      <li><a href="#chatbot" class="nav-link">Chatbot <i class='bx bx-message-square-dots'></i></a></li>
+      <li><a href="#contact" class="nav-link">Contact <i class='bx bx-envelope'></i></a></li>
+      <li><a href="resources.html" class="nav-link active">Resources <i class='bx bx-folder'></i></a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="main-content">
+  <section class="resources">
+    <h1 class="aligncenter glitch" data-text="Coding Resources">Coding Resources</h1>
+    <div class="resources-grid">
+      <div class="resource-card">
+        <h2>Documentation</h2>
+        <p>Official documentation for various programming languages, libraries, and frameworks.</p>
+        <a href="https://devdocs.io/" target="_blank">Explore Documentation</a>
+      </div>
+      <div class="resource-card">
+        <h2>Tutorials</h2>
+        <p>A collection of tutorials and guides to help you master coding languages and tools.</p>
+        <a href="https://www.freecodecamp.org/" target="_blank">Visit FreeCodeCamp</a>
+      </div>
+      <div class="resource-card">
+        <h2>Code Challenges</h2>
+        <p>Test your skills and improve by solving real-world coding challenges.</p>
+        <a href="https://www.hackerrank.com/" target="_blank">Solve Challenges</a>
+      </div>
+      <div class="resource-card">
+        <h2>Developer Tools</h2>
+        <p>Essential tools for coding, debugging, and optimizing your projects.</p>
+        <a href="https://code.visualstudio.com/" target="_blank">Get VS Code</a>
+      </div>
+      <div class="resource-card">
+        <h2>Version Control</h2>
+        <p>Learn how to manage your code versions and collaborate using Git and GitHub.</p>
+        <a href="https://git-scm.com/" target="_blank">Learn Git</a>
+      </div>
+      <div class="resource-card">
+        <h2>APIs</h2>
+        <p>Access free APIs to build your next web or mobile application.</p>
+        <a href="https://rapidapi.com/" target="_blank">Explore APIs</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
