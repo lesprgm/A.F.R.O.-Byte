@@ -57,10 +57,6 @@
             font-size: 1.8rem;
             color: var(--text-color);
             transition: color 0.3s ease;
-            position: relative;
-        }
-        .navbar a i {
-            margin-left: 0.5rem;
         }
         .navbar a:hover {
             color: var(--hover-color);
@@ -124,11 +120,18 @@
         .send-btn:hover {
             background-color: var(--hover-color);
         }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: var(--navbar-bg);
+            color: #aaa;
+            font-size: 0.8rem;
+        }
     </style>
 </head>
 <body>
 <header class="header">
-    <a href="#home" class="logo">
+    <a href="HomePage.html" class="logo">
         <img src="CroppedLogo.jpg" alt="Logo" class="logo-img">
     </a>
     <i class='bx bx-menu' id="menu-icon"></i>
@@ -137,9 +140,9 @@
             <li><a href="HomePage.html" class="nav-link">Home <i class='bx bx-home'></i></a></li>
             <li><a href="LearnPage.html" class="nav-link">Learn <i class='bx bx-book'></i></a></li>
             <li><a href="CoursesPage.html" class="nav-link">Courses <i class='bx bx-code-alt'></i></a></li>
-            <li><a href="ChatbotPage.html" class="nav-link">Chatbot <i class='bx bx-message-square-dots'></i></a></li>
+            <li><a href="ChatbotPage.html" class="nav-link active">Chatbot <i class='bx bx-message-square-dots'></i></a></li>
             <li><a href="ContactPage.html" class="nav-link">Contact <i class='bx bx-envelope'></i></a></li>
-            <li><a href="ResourcesPage.html" class="nav-link active">Resources <i class='bx bx-folder'></i></a></li>
+            <li><a href="ResourcesPage.html" class="nav-link">Resources <i class='bx bx-folder'></i></a></li>
         </ul>
     </nav>
 </header>
@@ -151,7 +154,7 @@
         <div class="chat-window">
             <div class="chat-output" id="chat-output">
                 <div class="message-bot">
-                    <p>Hello! I'm Code Bot. Ready to tackle some coding questions? Ask away!</p>
+                    <p>Hello! I'm Code Bot, your coding assistant. How can I help you today?</p>
                 </div>
             </div>
 
@@ -163,7 +166,7 @@
     </section>
 </main>
 
-<footer style="text-align: center; padding: 1rem; background-color: var(--navbar-bg); color: #aaa; font-size: 0.8rem;">
+<footer>
     <p>AfroByte 2024</p>
 </footer>
 
@@ -171,17 +174,14 @@
     const chatOutput = document.getElementById('chat-output');
     const chatInput = document.getElementById('chat-input');
 
-    const codingQuestions = [
-        "What's the difference between Java and JavaScript?",
-        "How do you reverse a string in Python?",
-        "Explain the concept of recursion.",
-        "What is a pointer in C?",
-        "How do you create a class in Java?",
-        "What's the time complexity of quicksort?",
-        "Explain inheritance in Object-Oriented Programming.",
-        "What are closures in JavaScript?",
-        "How do you write a SQL query to find duplicate records?"
-    ];
+    // Response logic for the chatbot
+    const responses = {
+        "help": "Sure! I can assist you with coding concepts, languages, and best practices. What do you need help with?",
+        "java": "Java is a popular programming language used for building enterprise-level applications. Do you have a specific question about Java?",
+        "python": "Python is great for web development, data analysis, and artificial intelligence. What would you like to learn about Python?",
+        "sql": "SQL is used for managing and querying relational databases. Need help with specific queries?",
+        "default": "I'm not sure about that. But feel free to ask me about programming languages, algorithms, or coding best practices, Or visit our other pages for more information!"
+    };
 
     function sendMessage() {
         const userMessage = chatInput.value.trim();
@@ -191,7 +191,7 @@
         chatInput.value = '';
 
         setTimeout(() => {
-            const botMessage = getBotResponse();
+            const botMessage = getBotResponse(userMessage.toLowerCase());
             appendMessage('bot', botMessage);
         }, 1000);
     }
@@ -204,8 +204,18 @@
         chatOutput.scrollTop = chatOutput.scrollHeight;
     }
 
-    function getBotResponse() {
-        return codingQuestions[Math.floor(Math.random() * codingQuestions.length)];
+    function getBotResponse(userMessage) {
+        if (userMessage.includes("help")) {
+            return responses.help;
+        } else if (userMessage.includes("java")) {
+            return responses.java;
+        } else if (userMessage.includes("python")) {
+            return responses.python;
+        } else if (userMessage.includes("sql")) {
+            return responses.sql;
+        } else {
+            return responses.default;
+        }
     }
 
     function handleKeyPress(event) {
