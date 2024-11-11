@@ -1,57 +1,76 @@
-A.F.R.O Byte 🌍✨
-Empowering African Students with Technology Skills for the Future
+# A.F.R.O Byte 🌍✨
+
+**Empowering African Students with Technology Skills for the Future**
 
 Welcome to A.F.R.O Byte! This project is dedicated to bridging the digital skills gap by providing African students with accessible, high-quality tech education. From online courses to interactive coding challenges, A.F.R.O Byte aims to equip students with the knowledge and experience they need to thrive in the tech industry.
 
-Table of Contents
-About A.F.R.O Byte
-Features
-Technologies Used
-Getting Started
-Usage
-Future Plans
-Contributing
-License
-Contact
-About A.F.R.O Byte
+---
+
+## Table of Contents
+- [About A.F.R.O Byte](#about-afro-byte)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Future Plans](#future-plans)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+---
+
+## About A.F.R.O Byte
+
 A.F.R.O Byte is a non-profit initiative focused on empowering African youth with the skills necessary to succeed in the tech world. Our mission is to make tech education accessible and engaging for students across Africa, regardless of their background. Through this platform, we aim to build a community of future tech leaders and innovators.
 
-Features
-Comprehensive Tech Courses: From beginner to advanced levels, covering web development, data science, app development, and more.
-Interactive Learning: Hands-on projects, coding challenges, and real-world applications.
-Custom Chatbot: An AI-driven chatbot trained to answer coding and tech-related questions, providing students with instant guidance.
-Mentorship Programs: Connect with industry experts for career advice, technical support, and professional development.
-Community Events: Hackathons, peer-to-peer coding sessions, and knowledge-sharing events to foster collaboration.
-Cross-Platform Accessibility: Web app, Android app (in development), and iOS version (upcoming) to ensure widespread accessibility.
-Technologies Used
-Frontend
-HTML5, CSS3, JavaScript
-React - for building dynamic user interfaces
-Boxicons - for iconography
-Backend
-Java with Spring Boot - REST API development
-MySQL - for structured data storage
-Spring Security - for user authentication and authorization
-Machine Learning
-Natural Language Processing (NLP) - for the custom chatbot
-TensorFlow / PyTorch - for training and deploying machine learning models
-Mobile
-Android (Java/Kotlin) - mobile application development for Android OS
-Swift - planned development for iOS version
-Getting Started
-Prerequisites
+---
+
+## Features
+
+- **Comprehensive Tech Courses**: From beginner to advanced levels, covering web development, data science, app development, and more.
+- **Interactive Learning**: Hands-on projects, coding challenges, and real-world applications.
+- **Custom Chatbot**: An AI-driven chatbot trained to answer coding and tech-related questions, providing students with instant guidance.
+- **Mentorship Programs**: Connect with industry experts for career advice, technical support, and professional development.
+- **Community Events**: Hackathons, peer-to-peer coding sessions, and knowledge-sharing events to foster collaboration.
+- **Cross-Platform Accessibility**: Web app, Android app (in development), and iOS version (upcoming) to ensure widespread accessibility.
+
+---
+
+## Technologies Used
+
+### Frontend
+- **HTML5, CSS3, JavaScript**
+- **React** - for building dynamic user interfaces
+- **Boxicons** - for iconography
+
+### Backend
+- **Java with Spring Boot** - REST API development
+- **MySQL** - for structured data storage
+- **Spring Security** - for user authentication and authorization
+
+### Machine Learning
+- **Natural Language Processing (NLP)** - for the custom chatbot
+- **TensorFlow** / **PyTorch** - for training and deploying machine learning models
+
+### Mobile
+- **Android (Java/Kotlin)** - mobile application development for Android OS
+- **Swift** - planned development for iOS version
+
+---
+
+## Getting Started
+
+### Prerequisites
 To run this project locally, ensure you have the following installed:
+- [Node.js](https://nodejs.org/) and npm
+- [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/javase-downloads.html) - for Spring Boot
+- [MySQL](https://dev.mysql.com/downloads/installer/) - for database setup
 
-Node.js and npm
-Java Development Kit (JDK) - for Spring Boot
-MySQL - for database setup
-Installation
-Clone the repository:
-
-bash
-Copy code
-git clone https://github.com/your-username/afro-byte.git
-cd afro-byte
+### Installation
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/afro-byte.git
+   cd afro-byte
 Install frontend dependencies:
 
 bash
@@ -110,3 +129,6 @@ Email: support@afrobyte.org
 LinkedIn: A.F.R.O Byte
 Twitter: @afrobyte
 We look forward to building a brighter, tech-savvy future for African students together!
+
+yaml
+Copy code
