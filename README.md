@@ -65,11 +65,12 @@ To run this project locally, ensure you have the following installed:
 - [Node.js](https://nodejs.org/) and npm
 - [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/javase-downloads.html) - for Spring Boot
 - [MySQL](https://dev.mysql.com/downloads/installer/) - for database setup
+- Flask Application
 
 ### Installation
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/afro-byte.git
+   git clone https://github.com/lesprgm/afro-byte.git
    cd afro-byte
 Install frontend dependencies:
 
