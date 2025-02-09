@@ -29,7 +29,7 @@ A.F.R.O Byte is a non-profit initiative focused on empowering African youth with
 
 - **Comprehensive Tech Courses**: From beginner to advanced levels, covering web development, data science, app development, and more.
 - **Interactive Learning**: Hands-on projects, coding challenges, and real-world applications.
-- **Custom Chatbot**: An AI-driven chatbot trained to answer coding and tech-related questions, providing students with instant guidance.
+- **Custom Chatbot**: An AI-driven chatbot trained to answer coding and tech-related questions, providing students with instant guidance. 
 - **Mentorship Programs**: Connect with industry experts for career advice, technical support, and professional development.
 - **Community Events**: Hackathons, peer-to-peer coding sessions, and knowledge-sharing events to foster collaboration.
 - **Cross-Platform Accessibility**: Web app, Android app (in development), and iOS version (upcoming) to ensure widespread accessibility.
@@ -130,5 +130,4 @@ LinkedIn: A.F.R.O Byte
 Twitter: @afrobyte
 We look forward to building a brighter, tech-savvy future for African students together!
 
-yaml
-Copy code
+
