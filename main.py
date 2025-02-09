@@ -7,7 +7,7 @@ import warnings
 warnings.filterwarnings("ignore", category=UserWarning, module="urllib3")
 
 app = Flask(__name__)
-CORS(app)  # This will handle CORS for development
+CORS(app)  
 
 api_key = os.getenv("GOOGLE_API_KEY")
 genai.configure(api_key=api_key)
@@ -31,12 +31,10 @@ model = genai.GenerativeModel(
                        "to help students learn computer science, of which you, the chatbot, are a part.",
 )
 
-# Serve the ChatbotPage.html from the templates folder
 @app.route('/chatbot')
 def chatbot():
     return render_template('ChatbotPage.html')
 
-# Serve other static HTML files from the root directory
 @app.route('/<page>')
 def serve_page(page):
     if page.endswith('.html'):
