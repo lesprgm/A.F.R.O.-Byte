@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to A.F.R.O Byte</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/static/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Global Styles */
         :root {
             --bg-color: #0d0d0d;
             --text-color: #00ff00;
@@ -27,7 +26,6 @@
             padding: 0;
         }
 
-        /* Hero Section */
         .hero {
             background: url('hero-image.jpg') no-repeat center center/cover;
             padding: 50px 0;
@@ -59,7 +57,6 @@
             background-color: var(--hover-color);
         }
 
-        /* Featured Programs Section */
         .featured-programs {
             display: flex;
             justify-content: space-around;
@@ -90,7 +87,6 @@
             margin-bottom: 20px;
         }
 
-        /* Blog Section */
         .blog {
             padding: 50px 20px;
         }
@@ -112,7 +108,6 @@
             margin-bottom: 15px;
         }
 
-        /* Call to Action Section */
         .cta {
             background-color: var(--main-color);
             padding: 50px 20px;
@@ -125,12 +120,12 @@
         }
 
         .cta p {
-            color: #aaa; /* Changed text color to grey */
-            font-size: 1.5rem; /* Increased size */
+            color: #aaa; 
+            font-size: 1.5rem; 
             margin-bottom: 30px;
         }
 
-        /* Footer */
+        
         footer {
             background-color: var(--navbar-bg);
             color: #aaa;
@@ -149,17 +144,17 @@
 
 <header class="header">
     <a href="HomePage.html" class="logo">
-        <img src="CroppedLogo.jpg" alt="Logo" class="logo-img glitch" data-text="A.F.R.O">
+        <img src="/static/CroppedLogo.jpg" alt="Logo" class="logo-img" data-text="A.F.R.O">
     </a>
     <i class='bx bx-menu' id="menu-icon"></i>
     <nav class="navbar">
         <ul>
-            <li><a href="HomePage.html" class="nav-link">Home <i class='bx bx-home'></i></a></li>
-            <li><a href="LearnPage.html" class="nav-link">Learn <i class='bx bx-book'></i></a></li>
-            <li><a href="CoursesPage.html" class="nav-link">Courses <i class='bx bx-code-alt'></i></a></li>
-            <li><a href="ChatbotPage.html" class="nav-link">Chatbot <i class='bx bx-message-square-dots'></i></a></li>
-            <li><a href="ContactPage.html" class="nav-link">Contact <i class='bx bx-envelope'></i></a></li>
-            <li><a href="ResourcesPage.html" class="nav-link active">Resources <i class='bx bx-folder'></i></a></li>
+            <li><a href="/" class="nav-link">Home <i class='bx bx-home'></i></a></li>
+            <li><a href="/LearnPage.html" class="nav-link">Learn <i class='bx bx-book'></i></a></li>
+            <li><a href="/CoursesPage.html" class="nav-link">Courses <i class='bx bx-code-alt'></i></a></li>
+            <li><a href="/chatbot" class="nav-link">Chatbot <i class='bx bx-message-square-dots'></i></a></li>
+            <li><a href="/ContactPage.html" class="nav-link">Contact <i class='bx bx-envelope'></i></a></li>
+            <li><a href="/ResourcesPage.html" class="nav-link">Resources <i class='bx bx-folder'></i></a></li>
         </ul>
     </nav>
 </header>

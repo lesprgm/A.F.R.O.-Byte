@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Bot - A.F.R.O Byte Coders</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: "Source Code Pro", monospace;
+        }
+        :root {
+            --bg-color: #0d0d0d;
+            --text-color: #00ff00;
+            --hover-color: #00cc00;
+            --navbar-bg: #1a1a1a;
+            --main-color: #00ff00;
+            --glitch-color1: #00ffcc;
+            --user-text-color: #00cc00;
+        }
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+            font-size: 1.6rem;
+        }
+        .header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background-color: var(--navbar-bg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            z-index: 100;
+            border-bottom: 2px solid var(--main-color);
+        }
+        .logo-img {
+            width: 6rem;
+            height: 6rem;
+            transition: transform 0.3s ease;
+        }
+        .logo-img:hover {
+            transform: scale(1.1);
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        .navbar a {
+            font-size: 1.8rem;
+            color: var(--text-color);
+            transition: color 0.3s ease;
+        }
+        .navbar a:hover {
+            color: var(--hover-color);
+        }
+        .main-content {
+            padding: 8rem 2rem;
+        }
+        .chatbot-container {
+            padding-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .chat-window {
+            background: var(--bg-color);
+            width: 60%;
+            max-width: 800px;
+            height: 500px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+        }
+        .chat-output {
+            background-color: var(--navbar-bg);
+            flex-grow: 1;
+            padding: 15px;
+            overflow-y: auto;
+            border-radius: 10px;
+            font-size: 1.4rem;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .chat-input-area {
+            display: flex;
+            background-color: var(--navbar-bg);
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .chat-input {
+            flex-grow: 1;
+            padding: 10px;
+            background-color: transparent;
+            border: none;
+            color: var(--text-color);
+            font-size: 1.4rem;
+            border-radius: 10px;
+        }
+        .send-btn {
+            background-color: var(--main-color);
+            padding: 10px 20px;
+            color: var(--bg-color);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.4rem;
+            margin-left: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .send-btn:hover {
+            background-color: var(--hover-color);
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: var(--navbar-bg);
+            color: #aaa;
+            font-size: 0.8rem;
+        }
+        .message-bot, .message-user {
+            margin-bottom: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            max-width: 80%;
+            word-wrap: break-word;
+            font-size: 1.4rem;
+        }
+        .message-bot {
+            background-color: var(--navbar-bg);
+            color: var(--glitch-color1);
+            align-self: flex-start;
+            border-left: 3px solid var(--glitch-color1);
+            padding-left: 10px;
+        }
+        .message-user {
+            background-color: var(--main-color);
+            color: #000000;
+            align-self: flex-end;
+            border-left: 3px solid var(--main-color);
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <a href="/" class="logo">
+        <img src="{{ url_for('static', filename='CroppedLogo.jpg') }}" alt="Logo" class="logo-img">
+    </a>
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/" class="nav-link">Home <i class='bx bx-home'></i></a></li>
+            <li><a href="/LearnPage.html" class="nav-link">Learn <i class='bx bx-book'></i></a></li>
+            <li><a href="/CoursesPage.html" class="nav-link">Courses <i class='bx bx-code-alt'></i></a></li>
+            <li><a href="/chatbot" class="nav-link active">Chatbot <i class='bx bx-message-square-dots'></i></a></li>
+            <li><a href="/ContactPage.html" class="nav-link">Contact <i class='bx bx-envelope'></i></a></li>
+            <li><a href="/ResourcesPage.html" class="nav-link">Resources <i class='bx bx-folder'></i></a></li>
+        </ul>
+    </nav>
+</header>
+<main class="main-content">
+    <section class="chatbot-container">
+        <h1 class="aligncenter glitch" data-text="C<>de B<>t">C<>de B<>t</h1>
+
+        <div class="chat-window">
+            <div class="chat-output" id="chat-output">
+                <div class="message-bot">
+                    <p>Hello! I'm Code Bot, your coding assistant. How can I help you today?</p>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" class="chat-input" placeholder="Type your coding question...">
+                <button class="send-btn" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>AfroByte 2024</p>
+</footer>
+
+<script>
+    const chatOutput = document.getElementById('chat-output');
+    const chatInput = document.getElementById('chat-input');
+
+    chatInput.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            sendMessage();
+        }
+    });
+
+    function sendMessage() {
+        const userMessage = chatInput.value.trim();
+        if (userMessage === '') return;
+
+        appendMessage('user', userMessage);
+        chatInput.value = '';
+
+        fetch('/send_message', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message: userMessage })
+        })
+        .then(response => response.json())
+        .then(data => appendMessage('bot', data.response || "Error: Could not get a response from the server."))
+        .catch(() => appendMessage('bot', "Error: Could not reach the server."));
+    }
+
+    function appendMessage(sender, message) {
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add(`message-${sender}`);
+        messageDiv.innerHTML = `<p>${message}</p>`;
+        chatOutput.appendChild(messageDiv);
+        chatOutput.scrollTop = chatOutput.scrollHeight;
+    }
+</script>
+
+</body>
+</html>
